@@ -28,6 +28,6 @@ public class TestFib {
 
     @Test
     void testFib3() {
-        assertEquals(34, ex.fibonacciIndex(5702887));
+            assertEquals(34, ex.fibonacciIndex(5702887));
     }
 }
