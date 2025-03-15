@@ -67,12 +67,14 @@ public class Exercises {
      */
     public char[][] generateTriangle(int n) {
         if(n == 0){
-            return new char[0][0];
+            return new char[][] {};
         }
-        char[][] triangle = new char[n][n];
-        triangle[0][0] = '*';
+        char[][] triangle = new char[n][];
+        triangle[0] = new char[1];
+        triangle[0][0]='*';
         for (int i = 1; i <= n - 2; i++) {
-            //print stars
+            int size = i ;
+            triangle[i] = new char[++size];
             triangle[i][0] = '*';
             for (int j = 1; j <= i - 1; j++) {
                 //print spaces
@@ -80,10 +82,11 @@ public class Exercises {
             }
             triangle[i][i] = '*';
         }
+        triangle[n-1] =new char[n];
         for (int j = 0; j < n; j++) {
             triangle[n-1][j] = '*';
         }
-        return triangle;
+     return triangle;
     }
 
     public static void main(String[] args) {
